@@ -68,6 +68,10 @@ export default {
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
 			},
+			fontFamily: {
+				heading: ['var(--font-heading)'],
+				body: ['var(--font-body)'],
+			},
 			keyframes: {
 				'accordion-down': {
 					from: {
@@ -84,11 +88,16 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+				'bounce-gentle': {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-3%)' },
+        }
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'bounce-gentle': 'bounce-gentle 0.5s ease-in-out',
 			}
 		}
 	},
